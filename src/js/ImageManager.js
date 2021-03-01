@@ -16,7 +16,7 @@ export default class ImageManager {
   }
 
   insertImage(filename) {
-    const src = `${Fetch.url}/${filename}`;
+    const src = `${Fetch.url}/images/${filename}`;
     const imgBlock = document.createElement('div');
     imgBlock.className = 'image_wrapper';
 

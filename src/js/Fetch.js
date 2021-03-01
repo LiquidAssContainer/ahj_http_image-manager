@@ -1,5 +1,5 @@
 export default class Fetch {
-  static url = '';
+  static url = 'https://ahj-http-image-manager-server.herokuapp.com';
 
   static async createRequest(params = '', responseType, options) {
     const response = await fetch(this.url + params, options);

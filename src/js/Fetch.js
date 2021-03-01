@@ -15,20 +15,20 @@ export default class Fetch {
   }
 
   static postImage(formdata) {
-    return this.createRequest('', 'text', {
+    return this.createRequest('/images', 'text', {
       method: 'POST',
       body: formdata,
     });
   }
 
   static getImageLinks() {
-    return this.createRequest('/images?method=getLinks', 'json', {
+    return this.createRequest('/images', 'json', {
       method: 'GET',
     });
   }
 
   static deleteImage(filename) {
-    return this.createRequest('/images?filename=' + filename, 'json', {
+    return this.createRequest('/images/' + filename, 'json', {
       method: 'DELETE',
       body: filename,
     });
